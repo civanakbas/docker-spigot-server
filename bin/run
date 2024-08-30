@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -ex 
+
+cd $(dirname $0)/..
+
+mkdir -p /data/mcserver
+
+cp -r plugins /data/mcserver
+cp server.properties /data/mcserver
+
+docker compose up -d 
